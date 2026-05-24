@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import IntroScreen from "./src/screens/IntroScreen";
+import HomeScreenSun from "./src/screens/components/HomeScreenSun/HomeScreenSun";
+import ContactScreen from "./src/screens/components/ContactScreen/ContactScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ContactScreen />
     </View>
   );
 }
@@ -13,8 +15,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  sunImg: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
   },
 });
