@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
 import TopTabs from "./components/TopTabs/TopTabs";
+import MeditationCard from "./components/MeditationCard/MeditationCard";
+import { dummyData } from "../Data/Data";
 
 const HomeScreen = () => {
   return (
@@ -20,6 +22,24 @@ const HomeScreen = () => {
         Lorem Ipsum is simply dummy text
       </Text>
       <TopTabs />
+      <FlatList
+        data={dummyData}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <MeditationCard
+            imageURL={item.image}
+            title={item.title}
+            date={item.date}
+          />
+        )}
+        showsVerticalScrollIndicator={false}
+        numColumns={2}
+        columnWrapperStyle={{
+          marginBottom: vs(16),
+          justifyContent: "space-between",
+        }}
+        contentContainerStyle={{ paddingBottom: vs(250), paddingTop: vs(24) }}
+      />
     </View>
   );
 };

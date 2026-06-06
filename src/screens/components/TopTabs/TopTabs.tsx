@@ -10,7 +10,7 @@ const TopTabs = () => {
   const [activeTabs, setActiveTabs] = useState("Live");
   return (
     <View style={styles.container}>
-      {tabsArr.map((tabName, index) => {
+      {tabsArr.map((tabName) => {
         const isActive = activeTabs === tabName;
         return (
           <TouchableOpacity
@@ -21,6 +21,7 @@ const TopTabs = () => {
             onPress={() => {
               setActiveTabs(tabName);
             }}
+            key={tabName}
           >
             <Text style={isActive ? styles.ActiveText : styles.InactiveText}>
               {tabName}
