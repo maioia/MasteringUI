@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
-import HomeScreen from "./src/screens/HomeScreen";
+import PaymentScreen from "./src/screens/components/PaymentScreen/PaymentScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <HomeScreen />
+      <PaymentScreen />
     </View>
   );
 }
