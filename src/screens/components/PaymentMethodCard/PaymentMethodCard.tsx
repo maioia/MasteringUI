@@ -1,6 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { FC } from "react";
-import { CashIcon } from "../../../../assets/icons";
 import { s, vs } from "react-native-size-matters";
 import Entypo from "@expo/vector-icons/Entypo";
 
@@ -8,15 +7,17 @@ interface PaymentMethodCardProps {
   isSelected?: boolean;
   title: string;
   icon: React.ReactNode;
+  onPress?: () => void;
 }
 
 const PaymentMethodCard: FC<PaymentMethodCardProps> = ({
   isSelected = false,
   title,
   icon,
+  onPress,
 }) => {
   return (
-    <View style={{ width: s(85) }}>
+    <TouchableOpacity onPress={onPress} style={{ width: s(85) }}>
       {isSelected && (
         <View style={styles.checkMarkContainer}>
           <Entypo name="check" size={12} color="#fff" />
@@ -26,7 +27,7 @@ const PaymentMethodCard: FC<PaymentMethodCardProps> = ({
         {icon}
       </View>
       <Text style={styles.label}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
