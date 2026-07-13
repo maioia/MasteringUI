@@ -5,6 +5,7 @@ import { s, vs } from "react-native-size-matters";
 import PaymentMethodCard from "../PaymentMethodCard/PaymentMethodCard";
 import PaymentList from "../PaymentList/PaymentList";
 import BankCardBox from "../BankCardBox/BankCardBox";
+import AddButton from "../AddButton/AddButton";
 
 const PaymentScreen = () => {
   return (
@@ -25,6 +26,7 @@ const PaymentScreen = () => {
       <PaymentList />
       <View style={{ paddingHorizontal: s(16) }}>
         <BankCardBox />
+        <AddButton/>
       </View>
     </View>
   );

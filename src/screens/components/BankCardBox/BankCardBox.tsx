@@ -2,11 +2,11 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { s, vs } from "react-native-size-matters";
 import { BankcardIcon } from "../../../../assets/icons";
-
 const BankCardBox = () => {
   return (
     <View style={styles.container}>
       <BankcardIcon />
+      
       <Text
         style={{
           color: "#32343E",
@@ -17,7 +17,14 @@ const BankCardBox = () => {
       >
         No master card added
       </Text>
-      <Text style={{ color: "#2D2D2D", fontSize: 15, marginTop:vs(6), textAlign:"center"  }}>
+      <Text
+        style={{
+          color: "#2D2D2D",
+          fontSize: 15,
+          marginTop: vs(6),
+          textAlign: "center",
+        }}
+      >
         You can add a mastercard and save it for later
       </Text>
     </View>
