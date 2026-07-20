@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View } from "react-native";
-import PaymentScreen from "./src/screens/components/PaymentScreen/PaymentScreen";
+import MainStackNavigator from "./src/Navigation/MainStackNavigator";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <PaymentScreen />
-    </View>
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: { flex: 1 },
 });
