@@ -1,15 +1,10 @@
-import { StyleSheet, Text, View } from "react-native";
-import MainStackNavigator from "./src/Navigation/MainStackNavigator";
 import { NavigationContainer } from "@react-navigation/native";
+import MyTabs from "./src/Navigation/BottomTabs";
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      <MyTabs />
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-});
